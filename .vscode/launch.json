@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mac/language-school-site/src/img/icons/favicon",
+      "program": "/Users/mac/language-school-site/src/img/icons/favicon/build/Debug/outDebug"
+    }
+  ]
+}
