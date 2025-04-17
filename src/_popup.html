@@ -1,0 +1,102 @@
+<div id="trial" class="popup">
+  <div class="popup__body">
+    <div class="popup__inner">
+      <div class="popup__content">
+        <button class="popup__close" type="button">Закрыть</button>
+        <h3 class="popup__heading">Записаться на пробное занятие</h3>
+        <form id="form-popup" class="form" data-form="trial-form">
+          <div class="form__section form__section--bottom-gutter-lg">
+            <div class="form__group form__group--col-2">
+              <div class="tab-label form__item">
+                <label class="tab-label__label">
+                  <span class="tab-label__text">Взрослые</span>
+                  <input
+                    class="tab-label__input visible-hidden"
+                    name="for-whom"
+                    type="radio"
+                    data-state-fields="hide"
+                    checked
+                  />
+                  <span class="tab-label__underline"></span>
+                </label>
+              </div>
+              <div class="tab-label form__item">
+                <label class="tab-label__label">
+                  <span class="tab-label__text">Дети</span>
+                  <input
+                    class="tab-label__input visible-hidden"
+                    name="for-whom"
+                    type="radio"
+                    data-state-fields="show"
+                  />
+                  <span class="tab-label__underline"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__section form__section--select-language">
+            <div class="form__item form__item--select">
+              <select class="field" id="lang-popup">
+                <option selected>Английский язык</option>
+                <option value="1">Французский язык</option>
+                <option value="2">Немецкий язык</option>
+                <option value="3">Испанский язык</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__section form__section--education-place">
+            <div class="form__group form__group--col-2">
+              <div class="form__item">
+                <input
+                  class="radio-button"
+                  name="where-study"
+                  id="school-popup"
+                  type="radio"
+                  checked
+                />
+                <label class="label" for="school-popup">Занятия в клубе</label>
+              </div>
+              <div class="form__item">
+                <input class="radio-button" name="where-study" id="online-popup" type="radio" />
+                <label class="label" for="online-popup">Онлайн-занятия</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__section form__section--student-info">
+            <div class="form__group form__group--col-2">
+              <div class="form__item">
+                <input class="field field--text" type="text" placeholder="Ваше имя" value="" />
+              </div>
+              <div class="form__item">
+                <input class="field field--text" type="tel" placeholder="Ваш телефон" value="" />
+              </div>
+            </div>
+            <div class="form__group form__group--col-2 form__group--additional hide">
+              <div class="form__item">
+                <input class="field field--text" type="text" placeholder="Имя ребенка" value="" />
+              </div>
+              <div class="form__item">
+                <input
+                  class="field field--text"
+                  type="text"
+                  placeholder="Возраст ребенка"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="form__group">
+              <div class="form__item"></div>
+              <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
+            </div>
+          </div>
+          <label class="form__politic">
+            <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+        </label>
+          <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+            <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" id="mc-embedded-subscribe" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

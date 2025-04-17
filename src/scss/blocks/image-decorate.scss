@@ -1,0 +1,63 @@
+//Рамка и обводка картинки
+.image-decorate {
+  position: relative;
+  display: block;
+  //нижний слой
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  //верхний слой
+  &--layer-top {
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &--rounded {
+    img {
+      border-radius: 30px;
+    }
+  }
+  &--rounded-bottom {
+    img {
+      border-radius: 0 0 50% 50%;
+    }
+  }
+  &--lt-rb-smoothed {
+    img {
+      border-radius: 100px 0 100px 0;
+    }
+  }
+  &--circle {
+    img {
+      border-radius: 100px;
+    }
+  }
+  &--circle-exclude-lt {
+    img {
+      border-radius: 0 50% 50% 50%;
+    }
+  }
+  img {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    border: 3px solid #ffeca0;
+    object-fit: cover;
+  }
+}

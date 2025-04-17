@@ -1,0 +1,24 @@
+<svg width="140" height="560" viewBox="0 0 140 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 420H140V560H0L0 420Z" fill="#FC8B4C"/>
+<path d="M0 490C0 451.34 31.3401 420 70 420V420V560V560C31.3401 560 0 528.66 0 490V490Z" fill="#FFCC1A"/>
+<rect x="35" y="490.355" width="50" height="50" transform="rotate(-45 35 490.355)" fill="#FDE9D4"/>
+<circle cx="70" cy="490" r="7" fill="black"/>
+<rect y="140" width="140" height="140" fill="#FDE9D4"/>
+<path d="M70 235L40 185H100L70 235Z" fill="#FE7167"/>
+<rect x="57" y="140" width="26" height="45" fill="black"/>
+<circle cx="70" cy="260" r="10" fill="black"/>
+<circle cx="100" cy="260" r="10" fill="black"/>
+<circle cx="40" cy="260" r="10" fill="black"/>
+<path d="M140 0L140 140L0 140L0 0L140 0Z" fill="#FE7167"/>
+<circle cx="96" cy="90" r="20" transform="rotate(90 96 90)" fill="black"/>
+<circle cx="76" cy="90" r="20" transform="rotate(90 76 90)" fill="#FDE9D4"/>
+<rect y="280" width="140" height="140" fill="#236967"/>
+<rect x="65.834" y="325" width="8.33333" height="50" fill="white"/>
+<rect x="49.375" y="335.269" width="8.33333" height="50" transform="rotate(-45 49.375 335.269)" fill="white"/>
+<rect width="8.33333" height="50" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 90.625 335.269)" fill="white"/>
+<rect x="45" y="354.167" width="8.33333" height="50" transform="rotate(-90 45 354.167)" fill="white"/>
+<circle r="5" transform="matrix(-1 0 0 1 70 400)" fill="white"/>
+<circle r="5" transform="matrix(-1 0 0 1 120 350)" fill="white"/>
+<circle r="5" transform="matrix(-1 0 0 1 20 350)" fill="white"/>
+<circle r="5" transform="matrix(-1 0 0 1 70 300)" fill="white"/>
+</svg>

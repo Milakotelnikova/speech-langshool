@@ -1,0 +1,88 @@
+.result {
+  // .result__heading
+  &__heading {
+    @include heading-v1;
+    @include text-gradient;
+    margin-bottom: 40px;
+  }
+
+  // .result__content
+  &__content {
+    max-width: 914px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // .result__list
+  &__list {
+    &.swiper {
+      padding-left: var(--container-gutter);
+      padding-right: var(--container-gutter);
+    }
+  }
+
+  // .result__list-wrapper
+  &__list-wrapper.swiper-wrapper {
+    @media (min-width: $md4) {
+      display: grid;
+      gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      box-sizing: border-box;
+    }
+  }
+
+  // .result__item
+  &__item {
+    &.swiper-slide {
+      height: auto;
+    }
+  }
+}
+.item-result {
+  @include section-decorate;
+  padding: 28px 37px;
+
+  // .item-result__text
+  &__text {
+    @include heading-v3;
+    &::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 26px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &--icon-books {
+      &::before {
+        background-image: url(../img/icons/result/books.svg);
+      }
+    }
+    &--icon-device {
+      &::before {
+        background-image: url(../img/icons/result/device.svg);
+      }
+    }
+    &--icon-brain {
+      &::before {
+        background-image: url(../img/icons/result/brain.svg);
+      }
+    }
+    &--icon-innovation {
+      &::before {
+        background-image: url(../img/icons/result/innovation.svg);
+      }
+    }
+    &--icon-audiobook {
+      &::before {
+        background-image: url(../img/icons/result/audiobook.svg);
+      }
+    }
+    &--icon-network {
+      &::before {
+        background-image: url(../img/icons/result/network.svg);
+      }
+    }
+  }
+}

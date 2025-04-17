@@ -1,0 +1,124 @@
+@import 'mixins';
+@import 'vars';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap&subset=cyrillic-ext');
+@import 'fonts';
+
+/* Icon font */
+//@import "icons";
+
+//Font by default>
+$fontFamily: 'Raleway-Light';
+$fontSize: 16;
+
+/* Width variables */
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1300px;
+
+/* Breakpoints variables */
+$md1: 1300px;
+$md2: 1024px;
+$md3: 992px;
+$md4: 768px;
+$md5: 576px;
+$md6: 480px;
+$md7: 375px;
+
+$mainColor: #000;
+
+/* null */
+@import 'null';
+body {
+  color: $mainColor;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  --container-gutter: 20px;
+  max-width: $maxWidthContainer;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-gutter);
+  padding-right: var(--container-gutter);
+  &--filled-block {
+    --container-gutter: 0;
+    @media (min-width: $md5) {
+      --container-gutter: 20px;
+    }
+  }
+}
+
+/* Visible-hidden class */
+.visible-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Blocks */
+@import 'header';
+@import 'footer';
+@import 'forms';
+@import 'blocks/image-decorate';
+@import 'blocks/social-links'; //сами иконки подключены шрифтом
+@import 'blocks/abbreviation-bg';
+@import 'blocks/popup';
+
+/* Sections */
+@import 'sections/section_promo';
+@import 'sections/section_lessons';
+@import 'sections/section_languages';
+@import 'sections/section_trial-lesson';
+@import 'sections/section_tip';
+@import 'sections/section_result';
+@import 'sections/section_our-values';
+@import 'sections/section_prices';
+@import 'sections/section_features';
+@import 'sections/section_offer-text';
+@import 'sections/section_privacy';
+@import 'sections/section_course';
+
+/* Pages */
+@import 'index';
+@import 'for-adults';
+
+
+
+/* Page */
+.page {
+  margin-top: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media (min-width: $md4) {
+    padding-bottom: 100px;
+  }
+  @media (min-width: $md1) {
+    padding-bottom: 140px;
+  }
+  &__item {
+    margin-bottom: 100px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md1) {
+      margin-bottom: 140px;
+    }
+    &--gutter-static-100 {
+      @media (min-width: $md1) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+}

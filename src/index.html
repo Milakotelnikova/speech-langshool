@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+      <!-- Promo -->
+      <section class="promo page__item page__item--gutter-static-100">
+        <div class="container">
+          <div class="promo__content promo__content--main">
+            <div class="promo__info">
+              <h1 class="promo__heading">ШКОЛА ИНОСТРАННЫХ ЯЗЫКОВ ДЛЯ ВСЕЙ СЕМЬИ</h1>
+              <button
+                data-trigger-for="trial"
+                class="btn btn--size-normal btn--purple"
+                type="button"
+              >
+                Пробное занятие
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Lessons -->
+      <div class="lessons page__item">
+        <div class="container">
+          <div class="lessons__content">
+            <div class="lessons__item">
+              <picture class="lessons__img-wrapper">
+                <source srcset="img/lessons/lessons-adult1.webp" type="image/webp" />
+                <img
+                  class="lessons__img"
+                  src="img/lessons/lessons-adult1.jpg"
+                  alt="Обучение для взрослых"
+                />
+              </picture>
+              <a href="/for-adults.html" class="lessons__link">
+                <div class="lessons__text">
+                  <span>Обучение</span>
+                  <span>Взрослых</span>
+                </div>
+              </a>
+            </div>
+            <div class="lessons__item">
+              <picture class="lessons__img-wrapper">
+                <source srcset="img/lessons/lessons-children1.webp" type="image/webp" />
+                <img
+                  class="lessons__img"
+                  src="img/lessons/lessons-children1.jpg"
+                  alt="Обучение для детей"
+                />
+              </picture>
+              <a href="/kids-online.html" class="lessons__link">
+                <div class="lessons__text">
+                  <span>Обучение</span>
+                  <span>Детей</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  Languages -->
+      <div class="page__item">
+        <div class="container container--filled-block">
+          <section class="languages">
+            <div class="languages__content">
+              <h3 class="languages__heading">
+                <span>У нас ваши дети</span>
+                <br />
+                <span>могут выучить:</span>
+              </h3>
+              <ul class="languages__list">
+                <li class="languages__item languages__item--eng">Английский</li>
+                <li class="languages__item languages__item--de">Немецкий</li>
+                <li class="languages__item languages__item--esp">Испанский</li>
+                <li class="languages__item languages__item--fr">Французский</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- Benefits -->
+      <section class="benefits page__item">
+        <div class="container">
+          <div class="benefits__content">
+            <h3 class="benefits__heading"><span>Почему Speech School?</span></h3>
+            <p class="benefits__text">
+              Ежегодно наши ученики успешно сдают международные экзамены, поступают в престижные
+              российские и европейские учебные заведения. В нашей школе обучаются дети и родители,
+              школьники и взрослые, бабушки и дедушки!
+            </p>
+            <ul class="benefits__list">
+              <li class="benefits__item benefits__item--teachers">
+                Преподаватели – носители языка
+              </li>
+              <li class="benefits__item benefits__item--online">Онлайн и офлайн занятия</li>
+              <li class="benefits__item benefits__item--individual">
+                Индивидуальные и групповые занятия
+              </li>
+              <li class="benefits__item benefits__item--lang">
+                Все занятия исключительно на выбранном языке
+              </li>
+              <li class="benefits__item benefits__item--personal">
+                Персональная программа обучения
+              </li>
+              <li class="benefits__item benefits__item--accreditate">
+                Аккредитация международной организацией Edexel
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+   <!-- Teachers -->
+   <div class="teachers container">
+    <h3 class="benefits__heading"><span>Команда нашей школы</span></h3>
+     <div class="teachers__slider carousel">
+       <div class="swiper swiper">
+        <div class="swiper-wrapper swiper__wrapper">
+          <div class="swiper-slide"> 
+            <div class="card">
+              <div class="img"><img src="img/teachers/teacher1.png" alt="img" draggable="false"></div>
+              <h2>Эсмира</h2>
+              <span>🇹🇷Преподаватель турецкого</span>
+              <p><span>Стаж 5 лет</span></p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+              <div class="card">
+                <div class="img"><img src="img/teachers/teacher2.png" alt="img" draggable="false"></div>
+                <h2>Зоя</h2>
+                <span>🇨🇳Преподаватель китайского</span>
+                <p><span>Стаж 5 лет</span></p>
+              </div>
+          </div>
+          <div class="swiper-slide">
+                <div class="card">
+                  <div class="img"><img src="img/teachers/teacher3.png" alt="img" draggable="false"></div>
+                  <h2>Мила</h2>
+                  <span>🇺🇸Преподаватель английского</span>
+                  <p><span>Стаж 5 лет</span></p>
+                </div>
+          </div>
+          <div class="swiper-slide">
+                <div class="card">
+                  <div class="img"><img src="img/teachers/teacher4.png" alt="img" draggable="false"></div>
+                  <h2>Ислам</h2>
+                  <span>🇹🇷Преподаватель турецкого</span>
+                  <p><span>Носитель языка</span></p>
+                </div>
+          </div>
+          <div class="swiper-slide">
+                <div class="card">
+                  <div class="img"><img src="img/teachers/teacher5.png" alt="img" draggable="false"></div>
+                  <h2>Даниель</h2>
+                  <span>🇪🇸Преподаватель испанского</span>
+                  <p><span>Носитель языка</span></p>
+                </div>
+          </div>
+          <div class="swiper-slide">
+                <div class="card">
+                  <div class="img"><img src="img/teachers/teacher6.png" alt="img" draggable="false"></div>
+                  <h2>Асад</h2>
+                  <span>🇸🇦Преподаватель арабского</span>
+                  <p><span>Носитель языка</span></p>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper__btns">
+        <button class="swiper-button-prev swiper__button swiper__button-prev" type="button">
+          <i id="left" class="fa-solid fa-angle-left"></i>
+        </button>
+        <button class="swiper-button-next swiper__button swiper__button-next" type="button">
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+     </div>
+    
+  </div>
+      <!-- For-clients -->
+      <section class="for-clients page__item">
+        <div class="for-clients__item container">
+          <div class="for-clients__img-wrapper">
+            <div
+              class="for-clients__img for-clients__img--kids image-decorate image-decorate--rounded"
+            >
+              <picture>
+                <source
+                  srcset="img/for-kids/for-kids-image.webp"
+                  media="(min-width: 1300px)"
+                  type="image/webp"
+                />
+                <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
+                <img src="img/for-kids/for-kids-image.jpg" alt="Фото учащихся младшей группы" />
+              </picture>
+            </div>
+          </div>
+          <div class="for-clients__wrapper">
+            <h2 class="for-clients__heading"><span>Для детей</span></h2>
+            <div class="for-clients__list-content">
+              <div class="for-clients__list-wrapper">
+                <h3 class="for-clients__list-heading">Онлайн</h3>
+                <ul class="for-clients__list">
+                  <li class="for-clients__list-item">адаптированная под ребёнка программа</li>
+                  <li class="for-clients__list-item">гибкое расписание</li>
+                  <li class="for-clients__list-item">занятия в привычной обстановке</li>
+                  <li class="for-clients__list-item">динамичные занятия по 30-40 минут</li>
+                </ul>
+              </div>
+              <div class="for-clients__list-wrapper">
+                <h3 class="for-clients__list-heading">Оффлайн</h3>
+                <ul class="for-clients__list">
+                  <li class="for-clients__list-item">занятия в нашей школе в г. Ростове-на-Дону</li>
+                  <li class="for-clients__list-item">удобное расписание</li>
+                  <li class="for-clients__list-item">живое общение со сверстниками</li>
+                  <li class="for-clients__list-item">увлекательные занятия в небольших группах</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="for-clients__item for-clients__item--reverse container">
+          <div class="for-clients__img-wrapper">
+            <div
+              class="for-clients__img for-clients__img--adults image-decorate image-decorate--rounded"
+            >
+              <picture>
+                <source srcset="img/for-adults/for-adults-image.webp" type="image/webp" />
+                <img src="img/for-adults/for-adults-image.jpg" alt="Фото взрослых учащихся" />
+              </picture>
+            </div>
+          </div>
+          <div class="for-clients__wrapper">
+            <h3 class="for-clients__heading"><span>Для взрослых</span></h3>
+            <div class="for-clients__list-content">
+              <div class="for-clients__list-wrapper">
+                <h4 class="for-clients__list-heading">Онлайн</h4>
+                <ul class="for-clients__list">
+                  <li class="for-clients__list-item">занятия из любой точки в удобное время</li>
+                  <li class="for-clients__list-item">персональная программа</li>
+                  <li class="for-clients__list-item">гибкое расписание</li>
+                  <li class="for-clients__list-item">преодоление языкового барьера</li>
+                </ul>
+              </div>
+              <div class="for-clients__list-wrapper">
+                <h4 class="for-clients__list-heading">Оффлайн</h4>
+                <ul class="for-clients__list">
+                  <li class="for-clients__list-item">занятия в нашей школе в г. Ростове-на-Дону</li>
+                  <li class="for-clients__list-item">удобное расписание</li>
+                  <li class="for-clients__list-item">уютная атмосфера</li>
+                  <li class="for-clients__list-item">индивидуальные или групповые занятия</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Learning-way -->
+      <section class="learning-way page__item">
+        <div class="container">
+          <div class="learning-way__content">
+            <div class="learning-way__text-wrapper">
+              <h2 class="learning-way__heading">
+                <span>Мы используем SMART-подход в обучении</span>
+              </h2>
+              <p class="learning-way__text">
+                Чтобы обучение было максимально эффективным, мы составляем индивидуальную карту
+                обучения: ваша исходная точка, конечный результат, срок достижения этого результата.
+                И будем вместе идти к этим целям
+              </p>
+            </div>
+            <div class="learning-way__method learning-method">
+              <ul class="learning-method__list">
+                <li
+                  class="learning-method__item abbreviation-bg abbreviation-bg--char-s abbreviation-bg--char-position"
+                >
+                  <span class="learning-method__decryption-text">specific</span>
+                  <span class="learning-method__main-text">
+                    Конкретная
+                    <br />
+                    цель
+                  </span>
+                </li>
+                <li
+                  class="learning-method__item abbreviation-bg abbreviation-bg--char-m abbreviation-bg--char-position"
+                >
+                  <span class="learning-method__decryption-text">measurable</span>
+                  <span class="learning-method__main-text">
+                    Критерии
+                    <br />
+                    успеха
+                  </span>
+                </li>
+                <li
+                  class="learning-method__item abbreviation-bg abbreviation-bg--char-a abbreviation-bg--char-position"
+                >
+                  <span class="learning-method__decryption-text">achievable</span>
+                  <span class="learning-method__main-text">
+                    Достижимая
+                    <br />
+                    цель
+                  </span>
+                </li>
+                <li
+                  class="learning-method__item abbreviation-bg abbreviation-bg--char-r abbreviation-bg--char-position"
+                >
+                  <span class="learning-method__decryption-text">relevant</span>
+                  <span class="learning-method__main-text">
+                    Цель, имеющая
+                    <br />
+                    значение
+                  </span>
+                </li>
+                <li
+                  class="learning-method__item abbreviation-bg abbreviation-bg--char-t abbreviation-bg--char-position"
+                >
+                  <span class="learning-method__decryption-text">time bound</span>
+                  <span class="learning-method__main-text">
+                    Четкие
+                    <br />
+                    сроки
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="learning-way__target learning-target">
+              <div class="learning-target__image image-decorate image-decorate--rounded">
+                <picture>
+                  <source
+                    srcset="img/learning-target/learning-target.webp"
+                    media="(min-width: 1300px)"
+                    type="image/webp"
+                  />
+                  <source srcset="img/learning-target/learning-target.webp" type="image/webp" />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/learning-target/learning-target.webp"
+                    type="image/webp"
+                  />
+                  <img src="img/learning-target/learning-target.jpg" alt="Фото учащихся учащейся" />
+                </picture>
+              </div>
+              <div class="learning-target__text-wrapper">
+                <strong class="learning-target__heading">Пример</strong>
+                <p class="learning-target__text">
+                  Раньше я учил английский в школе, но многое подзабыл. Теперь я хочу работать в международной компании и уверенно общаться с коллегами. Для этого мне нужно подтянуть язык, чтобы успешно пройти собеседование и комфортно себя чувствовать в коллективе.
+                </p>
+              </div>
+            </div>
+            <div class="learning-steps">
+              <div class="learning-steps__item">
+                <div class="learning-steps__text-wrapper">
+                  <h3
+                    class="learning-steps__heading abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position"
+                  >
+                    Определяем текущий
+                    <br />
+                    уровень и ставим цель
+                  </h3>
+                  <p class="learning-steps__text">
+                    В первую очередь важно определить ваш текущий уровень владения языком. Затем мы вместе поставим конкретную цель: достичь уровня свободного общения в специфической области (например, бизнес-английский).
+                  </p>
+                </div>
+              </div>
+              <div class="learning-steps__item learning-steps__item--reverse">
+                <div class="learning-steps__text-wrapper">
+                  <h3
+                    class="learning-steps__heading abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position"
+                  >
+                    Критерии успеха
+                  </h3>
+                  <p class="learning-steps__text">
+                    Давайте определим промежуточные этапы и критерии успеха. Когда вы сможете свободно выразить свои мысли на английском? Сможете ли вы самостоятельно написать электронное письмо? Как будете знать, что вы достигли цели?
+                  </p>
+                </div>
+              </div>
+              <div class="learning-steps__item">
+                <div class="learning-steps__text-wrapper">
+                  <h3
+                    class="learning-steps__heading abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position"
+                  >
+                    Достижимая цель
+                  </h3>
+                  <p class="learning-steps__text">
+                    Если ваш текущий уровень Beginner, то реалистичной целью на начальном этапе будет достижение уровня Pre-Intermediate.
+                  </p>
+                </div>
+              </div>
+              <div class="learning-steps__item learning-steps__item--reverse">
+                <div class="learning-steps__text-wrapper">
+                  <h3
+                    class="learning-steps__heading abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position"
+                  >
+                    Имеющая значение цель
+                  </h3>
+                  <p class="learning-steps__text">
+                    Подумайте, как появление языковой компетенции изменит вашу жизнь? Какие новые возможности она откроет?
+                  </p>
+                </div>
+              </div>
+              <div class="learning-steps__item">
+                <div class="learning-steps__text-wrapper">
+                  <h3
+                    class="learning-steps__heading abbreviation-bg abbreviation-bg--counter abbreviation-bg--counter-position"
+                  >
+                    Четкие сроки
+                  </h3>
+                  <p class="learning-steps__text">Когда вы хотите достичь своего целевого уровня? Установим реалистичные сроки и будем двигаться вперед с мотивацией!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- feedback -->
+      <section class="feedback page__item">
+        <div class="container">
+          <h2 class="feedback__heading">
+            <span>Отзывы наших учеников</span>
+          </h2>
+          <div class="feedback__slider">
+            <div class="swiper">
+              <div class="swiper-wrapper swiper__wrapper">
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Дмитрий</h3>
+                        <p>Студент</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>Занимаюсь китайским языком с Зоей лаоши! Комфортные и увлекательные уроки. Мое произношение стало в разы лучше, и самое главное - уроки интересные и уникальные, преподаватель дает свои собственные разработки. Очень нравится, что учим язык не в отрыве от культуры, и в конце каждого урока смотрим китайские идиомы! Спасибо больше преподавателю!</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Кира</h3>
+                        <p>Студент</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>очень милая и добрая учительница.все понятно объясняет и поможет,если что-то недопоняли.удобное место расположение школы и комфортная обстановка</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Анна</h3>
+                        <p>Студент</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>Занятия по английскому проводятся динамично, на высоком профессиональном уровне. Молодые и активные преподаватели хорошо подготовлены, всегда с удовольствием иду на урок. Особенно полезны занятия с носителями языка, мне кажется.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Ольга</h3>
+                        <p>Студент</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>Учится было интересно, весь персонал доброжелателен и терпелив. Хорошие классы, удобное расположение, уютно. Буду очень скучать, особено за своим преподавателем. Эсмира, если вы это прочитаете, знайте, что вы останетесь навсегда в моем сердце добрым терпеливым ангелом, я буду очень скучать ❤️</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Jane</h3>
+                        <p>Student</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero iure aspernatur, iste neque asperiores labore autem voluptate dignissimos reiciendis fugit temporibus ducimus quisquam illum totam!</p>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper__slide">
+                  <div class="feedback__slider-card">
+                    <div class="feedback__slider-headling">
+                      <img src="img/teachers/teacher1.png" alt="photo">
+                      <div>
+                        <h3>Jane</h3>
+                        <p>Student</p>
+                      </div>
+                    </div>
+                    <div class="feedback__slider-rating">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                      <img src="/img/icons/rating.png" alt="icon">
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero iure aspernatur, iste neque asperiores labore autem voluptate dignissimos reiciendis fugit temporibus ducimus quisquam illum totam!</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="swiper__btns">
+                <button class="swiper-button-prev swiper__button swiper__button-prev" type="button">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="swiper-button-next swiper__button swiper__button-next" type="button">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!-- Trial-lesson -->
+      <div class="page__item">
+        <div class="container container--filled-block">
+          <div class="trial-lesson">
+            <div class="trial-lesson__content">
+              <h3 class="trial-lesson__heading">Записаться на пробное занятие</h3>
+              <form class="trial-lesson__form form" data-form="trial-form">
+                <div class="form__section form__section--bottom-gutter-lg">
+                  <div class="form__group form__group--col-2">
+                    <div class="tab-label form__item">
+                      <label class="tab-label__label">
+                        <span class="tab-label__text">Взрослые</span>
+                        <input
+                          class="tab-label__input visible-hidden"
+                          name="for-whom"
+                          type="radio"
+                          data-state-fields="hide"
+                          checked
+                        />
+                        <span class="tab-label__underline"></span>
+                      </label>
+                    </div>
+                    <div class="tab-label form__item">
+                      <label class="tab-label__label">
+                        <span class="tab-label__text">Дети</span>
+                        <input
+                          class="tab-label__input visible-hidden"
+                          name="for-whom"
+                          type="radio"
+                          data-state-fields="show"
+                        />
+                        <span class="tab-label__underline"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section form__section--select-language">
+                  <div class="form__item form__item--select">
+                    <select class="field" id="lang-2">
+                      <option selected>Английский язык</option>
+                      <option value="1">Французский язык</option>
+                      <option value="2">Немецкий язык</option>
+                      <option value="3">Испанский язык</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form__section form__section--education-place">
+                  <div class="form__group form__group--col-2">
+                    <div class="form__item">
+                      <input
+                        class="radio-button"
+                        name="where-study"
+                        id="school-2"
+                        type="radio"
+                        checked
+                      />
+                      <label class="label" for="school-2">Занятия в клубе</label>
+                    </div>
+                    <div class="form__item">
+                      <input class="radio-button" name="where-study" id="online-2" type="radio" />
+                      <label class="label" for="online-2">Онлайн-занятия</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__section form__section--student-info">
+                  <div class="form__group form__group--col-2">
+                    <div class="form__item">
+                      <input
+                        class="field field--text"
+                        type="text"
+                        placeholder="Ваше имя"
+                        value=""
+                      />
+                    </div>
+                    <div class="form__item">
+                      <input
+                        class="field field--text"
+                        type="tel"
+                        placeholder="Ваш телефон"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="form__group form__group--col-2 form__group--additional hide">
+                    <div class="form__item">
+                      <input
+                        class="field field--text"
+                        type="text"
+                        placeholder="Имя ребенка"
+                        value=""
+                      />
+                    </div>
+                    <div class="form__item">
+                      <input
+                        class="field field--text"
+                        type="text"
+                        placeholder="Возраст ребенка"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="form__group">
+                    <div class="form__item"></div>
+                    <input
+                      class="field field--text"
+                      type="email"
+                      placeholder="Ваша почта"
+                      value=""
+                    />
+                  </div>
+                  <label>
+                    <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+                </label>
+                </div>
+                <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+                  <input class="btn btn--size-normal btn--purple" type="submit" value="Отправить" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- History -->
+      <div class="history page__item">
+        <div class="container">
+          <div class="history__content">
+            <h2 class="history__heading"><span>История развития Speech school</span></h2>
+            <div class="history__nav-line nav-line swiper">
+              <div class="nav-line__wrapper swiper-wrapper">
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+                <button class="nav-line__item swiper-slide" type="button"></button>
+              </div>
+            </div>
+            <div class="history__slider slider-history swiper">
+              <div class="swiper-wrapper">
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2012</div>
+                    <p class="slider-history__text">
+                      Открытие первого офиса школы в г. Ростове-на-Дону
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/slider-history/slider-image-1.webp" type="image/webp" />
+                      <img src="img/slider-history/slider-image-1.jpg" alt="Достижения 2012 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2014</div>
+                    <p class="slider-history__text">
+                      Школа расширила свою программу обучения, добавив несколько новых языков
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/for-kids/for-kids-hero-image.webp" type="image/webp" />
+                      <img src="img/for-kids/for-kids-hero-image.jpg" alt="Достижения 2014 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2016</div>
+                    <p class="slider-history__text">
+                      Открытие языковых лагерей для взрослых и детей с летним обучением в Лондоне
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/for-kids/for-kids-image.webp" type="image/webp" />
+                      <img src="img/for-kids/for-kids-image.jpg" alt="Достижения 2016 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2018</div>
+                    <p class="slider-history__text">
+                      Внедрение онлайн-платформы помогло Speech School оставаться на связи со своими студентами и обеспечить им доступ к занятиям прямо из дома
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/lessons/lessons-adult1.webp" type="image/webp" />
+                      <img src="img/lessons/lessons-adult1.jpg" alt="Достижения 2018 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2020</div>
+                    <p class="slider-history__text">
+                      Наша команда расширяется и становится лучше. У нас работает более 10 носителей языка и 30 преподавателей с высшим образованием ведущих университетов мира
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/lessons/lessons-for-self.webp" type="image/webp" />
+                      <img src="img/lessons/lessons-for-self.jpg" alt="Достижения 2020 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2022</div>
+                    <p class="slider-history__text">
+                      Школа признана ведущей языковой школой в Ростове, получила несколько дипломов и наград
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/lessons/lessons-for-travel.webp" type="image/webp" />
+                      <img src="img/lessons/lessons-for-travel.jpg" alt="Достижения 2022 года" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-history__slide swiper-slide">
+                  <div class="slider-history__text-wrapper">
+                    <div class="slider-history__heading">2024</div>
+                    <p class="slider-history__text">
+                      Школа привлекла внимание международных партнеров. За последние два года более 50 наших студентов смогли уехать заграницу по программе обмена
+                    </p>
+                  </div>
+                  <div
+                    class="slider-history__image image-decorate image-decorate--layer-top image-decorate--lt-rb-smoothed"
+                  >
+                    <picture>
+                      <source srcset="img/lessons/lessons-for-work.webp" type="image/webp" />
+                      <img src="img/lessons/lessons-for-work.jpg" alt="Достижения 2024 года" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
+  </body>
+</html>

@@ -1,0 +1,95 @@
+.lessons {
+  // .lessons__content
+  &__content {
+    display: grid;
+    justify-items: center;
+    row-gap: 60px;
+    @media (min-width: $md5) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
+    @media (min-width: $md4) {
+      grid-template-columns: repeat(auto-fill, minmax(min-content, 223px));
+      column-gap: 50px;
+    }
+    @media (min-width: $md2) {
+      column-gap: 70px;
+    }
+  }
+
+  // .lessons__item
+  &__item {
+    width: 223px;
+    position: relative;
+    @media (min-width: $md5) {
+      &:nth-child(odd) {
+        justify-self: end;
+      }
+      &:nth-child(even) {
+        justify-self: start;
+      }
+    }
+    @media (min-width: $md4) {
+      &:nth-child(n) {
+        justify-self: initial;
+      }
+    }
+  }
+
+  // .lessons__text
+  &__text {
+    @include heading-v1;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    text-transform: uppercase;
+    // word-break: break-word;
+    span {
+      background-color: $white;
+      padding-left: 5px;
+      padding-right: 5px;
+      transition: background-color 0.2s linear;
+    }
+  }
+
+  // .lessons__img-wrapper
+  &__img-wrapper {
+    flex-shrink: 0;
+    display: block;
+    width: 200px;
+    border-radius: 60px;
+    overflow: hidden;
+  }
+
+  // .lessons__img
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  // .lessons__link
+  &__link {
+    color: inherit;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: box-shadow 0.2s linear;
+    }
+    &:hover,
+    &:focus-visible {
+      .lessons__text span {
+        background-color: $beige;
+      }
+    }
+    &:focus-visible {
+      &::after {
+        box-shadow: 0 0 5px 2px $beige;
+      }
+    }
+  }
+}

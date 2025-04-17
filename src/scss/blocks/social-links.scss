@@ -1,0 +1,18 @@
+.social-links {
+  list-style: none;
+  // .social-links__item
+  &__item {
+    font-size: 20px;
+  }
+  // .social-links__link
+  &__link {
+    color: #000;
+    &:hover .icon::before {
+      color: $purple;
+    }
+    &:active > .icon::before,
+    &:focus > .icon::before {
+      color: $mint;
+    }
+  }
+}

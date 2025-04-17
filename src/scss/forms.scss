@@ -1,0 +1,330 @@
+/* Button */
+.btn {
+  display: inline-block;
+  user-select: none;
+  touch-action: manipulation;
+  white-space: normal;
+  border-radius: 40px;
+  color: $white;
+  letter-spacing: 0.01rem;
+  font-family: $text;
+  text-align: center;
+  transition-property: box-shadow, background-color;
+  will-change: box-shadow, background-color;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  &--size-normal {
+    padding: 1.0625em 2.125em;
+    font-size: 18px;
+    font-weight: 600;
+    @media (min-width: $md1) {
+      font-size: 18px;
+    }
+  }
+  &--size-small {
+    padding: 1.0625em 2.125em;
+    font-size: 14px;
+    font-weight: 600;
+    @media (min-width: $md1) {
+      font-size: 14px;
+    }
+  }
+  &--purple {
+    background-color: $purple;
+    &:hover {
+      box-shadow: #d474b766 0 8px 10px 0;
+    }
+    &:active {
+      background-color: #481756;
+    }
+    &:focus {
+      box-shadow: #d474b766 inset 0px 10px 10px 0px;
+    }
+  }
+}
+
+/* Tab-label */
+.tab-label {
+  // .tab-label__label
+  &__label {
+    position: relative;
+    display: block;
+    padding: 10px 12px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  // .tab-label__input
+  &__input {
+    &:checked + .tab-label__underline {
+      border-color: $purple;
+    }
+  }
+
+  // .tab-label__text
+  &__text {
+    @include heading-v2;
+  }
+
+  // .tab-label__underline
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 2px solid #94c6c4;
+  }
+}
+
+/* Form */
+.form {
+  min-width: 280px;
+
+  // .form__section
+  &__section {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
+    }
+    &--student-info {
+      grid-template-columns: 1fr;
+      margin-bottom: 26px;
+      @media (min-width: $md4) {
+        margin-bottom: 30px;
+      }
+    }
+    &--select-language {
+      grid-template-columns: 1fr;
+    }
+    &--education-place {
+      .main-form__item {
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: start;
+      }
+      .form__item {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: start;
+        column-gap: 10px;
+      }
+    }
+    &--submit {
+      grid-template-columns: 1fr;
+      justify-items: start;
+    }
+    &--bottom-gutter-lg {
+      margin-bottom: 26px;
+      @media (min-width: $md4) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // .form__group
+  &__group {
+    display: grid;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: $md4) {
+      margin-bottom: 14px;
+    }
+    &--additional {
+      transition: all 0.2s linear;
+      &.hide {
+        margin-bottom: 0;
+        height: 0;
+      }
+    }
+    &--col-2 {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 12px;
+      @media (min-width: $md5) {
+        column-gap: 20px;
+      }
+    }
+  }
+
+  // .form__item
+  &__item {
+    &--select {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        content: '';
+        display: block;
+        background-image: url(../img/icons/dropdown-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 10px;
+        height: 6px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      &:hover .education__dropdown,
+      &:focus-within .education__dropdown {
+        transform: perspective(100px) rotateX(0deg) translateX(-50%);
+        opacity: 1;
+      }
+      select {
+        appearance: none;
+        padding-right: 1.5em;
+      }
+    }
+  }
+
+  // .form__text
+  &__text {
+    font-family: $text;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    @media (min-width: $md7) {
+      margin-bottom: 30px;
+    }
+    @media (min-width: $md4) {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+  }
+
+    // .form__label 
+    &__politic {
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+  // .main-form__btn-wrapper
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media (min-width: $md4) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+//extend styles for .field
+%field-error {
+  &:invalid {
+    border: 1px solid #ffa0a0;
+    &:hover {
+      box-shadow: 0 2px 4px 0 #ffa0a0;
+    }
+  }
+}
+
+/* Field */
+.field {
+  @include heading-v3;
+  width: 100%;
+  padding: 0.675em 1em;
+  border-radius: 10px;
+  border: 1px solid #ffeca0;
+  padding: 0.75em 1em;
+  background-color: $white;
+  transition: box-shadow 0.1s linear;
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4px 0 #ffeca0;
+  }
+  &:disabled {
+    border: 1px solid #f5f5f5;
+    background-color: #fcfcfc;
+    color: #858585;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  @media (min-width: $md4) {
+    padding: 0.75em 1em;
+  }
+  &--padding-right {
+    padding-right: 50px;
+  }
+  &--text {
+    @extend %field-error;
+  }
+  &--number {
+    position: relative;
+    @extend %field-error;
+    appearance: textfield;
+  }
+}
+
+/* Radio-button */
+.radio-button {
+  position: relative;
+  cursor: pointer;
+  background-color: $white;
+  border: 2px solid $purple;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  appearance: none;
+  color-adjust: exact;
+  transition: box-shadow 0.1s linear;
+  outline: none;
+  &:hover:not(:checked),
+  &:focus-visible {
+    box-shadow: 0 0 3px 1px $purple;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  &:checked::before {
+    background-color: $purple;
+    width: 6px;
+    height: 6px;
+  }
+  &:active:not(:checked)::before {
+    background-color: $purple;
+    width: 12px;
+    height: 12px;
+  }
+  &:invalid {
+    border: 2px solid #bdbdbd;
+    background-color: $white;
+    box-shadow: none;
+    &::before {
+      background-color: $white;
+    }
+  }
+  &:disabled {
+    border: 2px solid #bdbdbd;
+    background-color: #bdbdbd;
+    box-shadow: none;
+    &::before {
+      background-color: #bdbdbd;
+    }
+  }
+}
+
+/* Label */
+.label {
+  @include heading-v3;
+}

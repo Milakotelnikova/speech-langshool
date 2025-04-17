@@ -1,0 +1,146 @@
+.footer {
+  background-color: $light-yellow;
+  border-radius: 50px 50px 0 0;
+
+  // .footer__inner
+  &__inner {
+    @include padding-container($maxWidthContainer, $pl, $pr);
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+    @media (min-width: $md5) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media (min-width: $md3) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  // .footer__block-group
+  &__block-group {
+    margin-bottom: 50px;
+    @media (min-width: $md5) {
+      flex-basis: 100%;
+    }
+    @media (min-width: $md4) {
+      flex-basis: 33.33%;
+      order: 1;
+    }
+  }
+
+  // .footer__logo
+  &__logo {
+    margin-bottom: 32px;
+    img {
+      width: 196px;
+      height: 40px;
+      @media (min-width: $md4) {
+        width: 242px;
+        height: 50px;
+      }
+      @media (min-width: $md3) {
+        width: 289px;
+        height: 60px;
+      }
+    }
+  }
+
+  // .footer__social
+  &__social {
+    margin-bottom: 30px;
+  }
+
+  // .footer__social-links
+  &__social-links {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  // .footer__courses
+  &__courses {
+    margin-bottom: 30px;
+    @media (min-width: $md5) {
+      flex-basis: 50%;
+    }
+    @media (min-width: $md4) {
+      flex-basis: 33.33%;
+      order: 0;
+      text-align: left;
+      padding-top: 15px;
+    }
+  }
+
+  // .footer__contacts
+  &__contacts {
+    margin-bottom: 50px;
+    @media (min-width: $md5) {
+      flex-basis: 50%;
+    }
+    @media (min-width: $md4) {
+      flex-basis: 33.33%;
+      order: 2;
+      text-align: right;
+      padding-top: 15px;
+    }
+  }
+
+  // .footer__item-heading
+  &__item-heading {
+    @include heading-v2;
+    margin-bottom: 20px;
+  }
+
+  // .footer__list
+  &__list {
+    @include heading-v3;
+  }
+
+  // .footer__list-item
+  &__list-item {
+    margin-bottom: 12px;
+  }
+
+  // .footer__link
+  &__link {
+    color: $black;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // .footer__bottom
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $md5) {
+      flex-basis: 100%;
+    }
+    @media (min-width: $md4) {
+      order: 3;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  // .footer__bottom-item
+  &__bottom-item {
+    font-size: 12px;
+    @media (min-width: $md3) {
+      font-size: 14px;
+    }
+  }
+
+  // .footer__copyright
+  &__copyright {
+    margin-bottom: 10px;
+    @media (min-width: $md4) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+}

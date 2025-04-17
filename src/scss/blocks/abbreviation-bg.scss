@@ -1,0 +1,55 @@
+.abbreviation-bg {
+  &::before {
+    z-index: -1;
+    position: absolute;
+    font-family: $font-decorate;
+    font-size: 80px;
+    color: #ffeca0;
+  }
+  &--char-s {
+    &::before {
+      content: 'S';
+    }
+  }
+  &--char-m {
+    &::before {
+      content: 'M';
+    }
+  }
+  &--char-a {
+    &::before {
+      content: 'A';
+    }
+  }
+  &--char-r {
+    &::before {
+      content: 'R';
+    }
+  }
+  &--char-t {
+    &::before {
+      content: 'T';
+    }
+  }
+  &--char-position {
+    &::before {
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &--counter {
+    &::before {
+      counter-increment: step-list;
+      //перед или после counter(step-list) можно поставить 'префикс/постфикс'
+      content: counter(step-list);
+    }
+  }
+  &--counter-position {
+    &::before {
+      top: 60%;
+      left: -15px;
+      transform: translateY(-50%);
+    }
+  }
+}

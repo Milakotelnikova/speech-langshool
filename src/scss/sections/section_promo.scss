@@ -1,0 +1,161 @@
+.promo {
+  // .promo__content
+  &__content {
+    display: grid;
+    row-gap: 60px;
+    @media (min-width: $md4) {
+      grid-template-columns: minmax(55%, 1fr) minmax(200px, 450px);
+      column-gap: 32px;
+    }
+    &::after {
+      content: '';
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 260px;
+      @media (min-width: $md7) {
+        height: 300px;
+      }
+      @media (min-width: $md5) {
+        height: 392px;
+      }
+      @media (min-width: $md4) {
+        height: 330px;
+        background-position: right;
+      }
+      @media (min-width: $md3) {
+        height: 390px;
+      }
+      @media (min-width: $md2) {
+        height: 420px;
+      }
+    }
+    &--main {
+      @media (min-width: $md4) {
+        grid-template-columns: minmax(45%, 1fr) minmax(200px, 560px);
+      }
+      &::after {
+        background-image: url('../../img/main-image.svg');
+        @media (min-width: $md3) {
+          height: 500px;
+        }
+        @media (min-width: $md2) {
+          height: 520px;
+        }
+        @media (min-width: $md1) {
+          height: 560px;
+        }
+      }
+    }
+    &--kids-online {
+      &::after {
+        background-image: url('../../img/kids-online-promo.png');
+      }
+    }
+    &--kids-offline {
+      &::after {
+        background-image: url('../../img/kids-offline-promo.png');
+      }
+    }
+    &--german {
+      &::after {
+        background-image: url('../../img/german-promo.png');
+      }
+    }
+    &--spanish {
+      &::after {
+        background-image: url('../../img/spanish-promo.png');
+      }
+    }
+    &--french {
+      &::after {
+        background-image: url('../../img/french-promo.png');
+      }
+    }
+    &--adults {
+      &::after {
+        height: 220px;
+        background-image: url('../../img/adults-promo.png');
+        @media (min-width: $md7) {
+          height: 250px;
+        }
+      }
+      @media (min-width: $md4) {
+        grid-template-columns: minmax(45%, 1fr) minmax(200px, 580px);
+      }
+    }
+  }
+
+  // .promo__info
+  &__info {
+    @media (min-width: $md4) {
+      align-self: center;
+    }
+  }
+
+  // .promo__group
+  &__group {
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      margin-bottom: 60px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // .promo__sub-info
+  &__sub-info {
+    margin-bottom: 60px;
+  }
+
+  // .promo__heading
+  &__heading {
+    font-family: $heading;
+    font-size: 30px;
+    line-height: 1.325;
+    letter-spacing: 0.02rem;
+    margin-bottom: 40px;
+    @media (min-width: $md3) {
+      font-size: 41px;
+    }
+    @media (min-width: $md1) {
+      font-size: 50px;
+    }
+    &--offer {
+      margin-bottom: 10px;
+    }
+  }
+  &__sub-heading {
+    @include heading-v1;
+    margin-bottom: 10px;
+  }
+
+  // .promo__text
+  &__text {
+    font-family: $heading-alt;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    @media (min-width: $md4) {
+      font-size: 22px;
+    }
+  }
+
+  // .promo__sub-text
+  &__sub-text {
+    font-family: $text;
+    font-size: 14px;
+    line-height: 1.55;
+    @media (min-width: $md4) {
+      font-size: 16px;
+      line-height: 1.625;
+    }
+  }
+
+  // .promo__date
+  &__date {
+    @include heading-v2;
+  }
+}

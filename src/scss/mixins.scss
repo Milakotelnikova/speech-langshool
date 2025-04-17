@@ -1,0 +1,110 @@
+/* Подключение шрифта */
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('../fonts/#{$file_name}.woff') format('woff'),
+      url('../fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+/* section */
+@mixin section-decorate {
+  background-color: $light-yellow;
+  border-radius: 50px;
+}
+/* container */
+//limit on breakpoints
+@mixin max-width-limiter {
+  max-width: 320px;
+  @media (min-width: $md7) {
+    max-width: $md7;
+  }
+  @media (min-width: $md6) {
+    max-width: $md6;
+  }
+  @media (min-width: $md5) {
+    max-width: $md5;
+  }
+  @media (min-width: $md4) {
+    max-width: $md4;
+  }
+  @media (min-width: $md3) {
+    max-width: $md3;
+  }
+  @media (min-width: $md2) {
+    max-width: $md2;
+  }
+  @media (min-width: $md1) {
+    max-width: $maxWidthContainer;
+  }
+}
+@mixin container($max-width, $width: 100%) {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  width: $width;
+}
+
+@mixin padding-container($max-width, $left, $right, $width: 100%) {
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $left;
+  padding-right: $right;
+  width: $width;
+}
+/* icon-pseudo */
+@mixin icon-before($size, $display) {
+  content: '';
+  display: $display;
+  width: $size;
+  height: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* text-gradient */
+@mixin text-gradient {
+  span {
+    background-image: linear-gradient(to top, rgb(255, 236, 160) 60%, rgba(0, 0, 0, 0) 50%);
+  }
+}
+/* heading */
+@mixin heading-v1 {
+  font-family: $heading;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  @media (min-width: $md6) {
+    font-size: 22px;
+  }
+  @media (min-width: $md5) {
+    font-size: 24px;
+    line-height: 1.415;
+  }
+}
+@mixin heading-v2 {
+  font-family: $heading-alt;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@mixin heading-v3 {
+  font-family: $text;
+  font-size: 14px;
+  line-height: 1.5;
+  @media (min-width: $md4) {
+    font-size: 16px;
+  }
+}
+/* link styles */
+@mixin nav-link-style {
+  color: $black;
+  &:hover {
+    color: $purple;
+  }
+  &:focus {
+    color: darken($purple, 10%);
+  }
+}
