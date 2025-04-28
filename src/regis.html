@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+        <section class="promo page__item page__item--gutter-static-100">
+            <div class="container">
+
+      <div class="popup__inner">
+        <div class="popup__content">
+          <h3 class="popup__heading">Регистрация</h3>
+          <form id="form-popup" class="form" data-form="trial-form"> 
+            <div class="form__section form__section--student-info">
+              <div class="form__group form__group--col-2">
+                <div class="form__item">
+                  <input class="field field--text" type="text" placeholder="Ваше имя" value="" />
+                </div>
+                <div class="form__item">
+                  <input class="field field--text" type="tel" placeholder="Ваш телефон" value="" />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
+              </div>
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" placeholder="Пароль" value="" />
+              </div>
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" placeholder="Подтвердите пароль" value="" />
+              </div>
+            </div>
+            <label class="form__politic">
+              <input type="checkbox" name="accept" onchange="document.getElementById('mc-embedded-subscribe').disabled = !this.checked" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+          </label>
+            <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+              <input class="btn btn--size-normal btn--purple" type="submit" value="Зарегистироваться" id="mc-embedded-subscribe" />
+            </div>
+            <a href="login.html" class="education__link">У меня уже есть аккаунт</a>
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+</main>
+@@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+        <section class="promo page__item page__item--gutter-static-100">
+            <div class="container">
+
+      <div class="popup__inner">
+        <div class="popup__content">
+          <h3 class="popup__heading">Вход в личный кабинет</h3>
+          <form id="form-popup" class="form" data-form="trial-form"> 
+            <div class="form__section form__section--student-info">
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" placeholder="Ваша почта" value="" />
+              </div>
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" placeholder="Пароль" value="" />
+              </div>
+            </div>
+            <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+              <input class="btn btn--size-normal btn--purple" type="submit" value="Войти" id="mc-embedded-subscribe" />
+            </div>
+            <a href="regis.html" class="education__link">Зарегистировать новый аккаунт</a>
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+</main>
+@@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
+</body>
+</html>
