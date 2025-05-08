@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # Сервис базы данных PostgreSQL
+  db:
+    container_name: db
+    image: postgres:15
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=speech_school_db
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network  # <--- ЭТО ОБЯЗАТЕЛЬНО
+
+
+  # Сервис бэкенда (Django + DRF)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./backend/media:/app/media
+      - ./backend/static:/app/static
+    env_file:
+      - ./backend/.env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  # Сервис фронтенда (например, React или другой фреймворк)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"  # Если фронтенд на React или другом фреймворке
+    depends_on:
+      - backend
+    environment:
+      - API_URL=http://backend:8000  # Адрес API бэкенда
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
+    driver: bridge
