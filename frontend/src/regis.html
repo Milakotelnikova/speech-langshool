@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+        <section class="promo page__item page__item--gutter-static-100">
+            <div class="container">
+
+      <div class="popup__inner">
+        <div class="popup__content">
+          <h3 class="popup__heading">Регистрация</h3>
+          <div id="form-error" class="form__error" style="color: red; margin-top: 10px;"></div>
+          <form id="registerForm" class="form">
+            <div class="form__section form__section--student-info">
+              <div class="form__group form__group--col-2">
+                <div class="form__item">
+                  <input class="field field--text" type="text" id="name" name="name" placeholder="Ваше имя" value="" required autocomplete="name" />
+                </div>
+                <div class="form__item">
+                  <input class="field field--text" type="tel" id="phone" name="phone" placeholder="Ваш телефон" value="" required autocomplete="tel" />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__item">
+                  <input class="field field--text" type="email" id="email" name="email" placeholder="Ваша почта" value="" required autocomplete="email" />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__item">
+                  <input class="field field--text" type="password" id="password" name="password" placeholder="Пароль" value="" required autocomplete="new-password" />
+                </div>
+              </div>
+              <div class="form__group">
+                <div class="form__item">
+                  <input class="field field--text" type="password" id="password_confirm" name="password_confirm" placeholder="Подтвердите пароль" value="" required autocomplete="new-password" />
+                </div>
+              </div>
+            </div>
+          
+            <label class="form__politic">
+              <input type="checkbox" name="accept" id="accept" required autocomplete="off" /> Я ознакомлен(-а) с <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+            </label>
+          
+            <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+              <input class="btn btn--size-normal btn--purple" type="submit" value="Зарегистироваться" id="submit-btn" />
+            </div>
+          
+            <a href="login.html" class="education__link">У меня уже есть аккаунт</a>
+          </form>
+          <!-- <script>
+            document.getElementById('registerForm').addEventListener('submit', async function(e) {
+              e.preventDefault();
+            
+              const name = document.getElementById('name').value.trim();
+              const phone = document.getElementById('phone').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const password = document.getElementById('password').value;
+              const passwordConfirm = document.getElementById('password_confirm').value;
+              const accept = document.getElementById('accept').checked;
+            
+              if (!accept) {
+                alert("Вы должны согласиться с политикой конфиденциальности.");
+                return;
+              }
+            
+              if (password !== passwordConfirm) {
+                alert("Пароли не совпадают.");
+                return;
+              }
+            
+              try {
+                const response = await fetch('http://localhost:8000/api/accounts/register/', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    password: password,
+                    password_confirm: passwordConfirm
+                  })
+                });
+            
+                const data = await response.json();
+            
+                if (response.ok) {
+                  alert("Регистрация успешна!");
+                  window.location.href = 'login.html';  // перенаправление после регистрации
+                } else {
+                  alert("Ошибка: " + JSON.stringify(data));
+                }
+              } catch (error) {
+                console.error("Ошибка запроса:", error);
+                alert("Ошибка соединения с сервером.");
+              }
+            });
+          </script> -->
+            
+        </div>
+      </div>
+  </div>
+  </section>
+</main>
+@@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
+</body>
+</html>

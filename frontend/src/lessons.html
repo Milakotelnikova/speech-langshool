@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+      <section class="promo page__item page__item--gutter-static-100">
+        <div class="container" id="lessonsContainer">
+          <div class="tabs">
+            <div class="tab active" data-tab="list1">Расписание занятий</div>
+            <div class="tab" data-tab="list2">Мои записи</div>
+          </div>
+    
+          <!-- Вкладка: Расписание занятий -->
+          <div class="tab-content active" id="list1">
+            <div id="lessonsContainer" class="lessons-grid"></div>
+            <div id="loadingIndicator" style="display: none;">Загрузка...</div>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+          </div>
+    
+          <!-- Вкладка: Мои записи -->
+          <div class="tab-content" id="list2">
+            <div id="myEnrollmentsContainer" class="lessons-grid"></div>
+            <div id="loadingMyEnrollments" style="display: none;">Загрузка записей...</div>
+            <div id="errorMyEnrollments" class="error-message" style="display: none;"></div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Модальное окно подтверждения отмены -->
+      <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal">
+          <p>Вы действительно хотите отменить запись?</p>
+          <div class="modal-buttons">
+            <button id="confirmCancel" class="confirm-button">Да, отменить</button>
+            <button id="closeModal" class="cancel-button">Нет, оставить</button>
+          </div>
+        </div>
+      </div>    
+  
+</main>
+@@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{})
+</body>
+</html>

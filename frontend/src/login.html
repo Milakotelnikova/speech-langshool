@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('_head.html',{ "title":"Speech School" })
+
+  <body>
+    @@include('_header.html',{})
+    <main class="page">
+        <section class="promo page__item page__item--gutter-static-100">
+            <div class="container">
+
+      <div class="popup__inner">
+        <div class="popup__content">
+          <h3 class="popup__heading">Вход в личный кабинет</h3>
+          <div id="login-message" style="margin-bottom: 10px; color: green;"></div>
+          <form id="loginForm" class="form"> 
+            <div class="form__section form__section--student-info">
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="email" name="email" placeholder="Ваша почта" value="" required/>
+              </div>
+              <div class="form__group">
+                <div class="form__item"></div>
+                <input class="field field--text" type="password" name="password" placeholder="Пароль" value="" required/>
+              </div>
+            </div>
+            <div id="login-error" style="color: red; margin-bottom: 10px;"></div>
+            <div class="form__section form__section--submit form__section--bottom-gutter-lg">
+              <input class="btn btn--size-normal btn--purple" type="submit" value="Войти" id="mc-embedded-subscribe" />
+            </div>
+            <a href="regis.html" class="education__link">Зарегистировать новый аккаунт</a>
+          </form>
+        </div>
+      </div>
+  </div>
+  </section>
+</main>
+@@include('_footer.html',{}) @@include('_popup.html',{}) @@include('_js.html',{}) @@include('_thank-you-modal.html',{})
+</body>
+</html>
